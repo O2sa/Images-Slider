@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin    : 0;
+    padding   : 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.slider-container {
+    margin  : 10px auto;
+    width   : 800px;
+    height  : 250px;
+    position: relative;
+}
+
+.slider-container img {
+    position  : absolute;
+    opacity   : 0;
+    transition: opacity 0.5s;
+    z-index   : 1;
+    width: 800px;
+    height: 250px;
+}
+
+.slider-container img.active {
+    opacity: 1;
+}
+
+.slider-container .slide-number {
+    position        : absolute;
+    left            : 10px;
+    top             : 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color           : #fff;
+    padding         : 5px 10px;
+    font-size       : 20px;
+    z-index         : 20;
+    border-radius   : 6px;
+}
+
+.slider-controls {
+    width   : 800px;
+    margin  : auto;
+    overflow: hidden;
+}
+
+.slider-controls .prev,
+.slider-controls .next {
+    /* position: absolute;
+    left: 10px;
+    top: 10px; */
+    background-color: cadetblue;
+    color           : #fff;
+    text-align      : center;
+    cursor          : pointer;
+
+    padding  : 5px;
+    font-size: 16px;
+    user-select  : none;
+    border-radius: 6px;
+    width        : 20%;
+}
+
+.slider-controls .prev {
+    float: left;
+}
+
+.slider-controls .next {
+    float: right;
+}
+
+
+.slider-controls .prev.disabled,
+.slider-controls .next.disabled {
+
+    background-color: #7fd9dc;
+    cursor          : no-drop;
+}
+
+
+.slider-controls .indicaters {
+
+    width: 60%;
+    float: left;
+
+}
+
+.slider-controls .indicaters ul {
+    list-style: none;
+    margin    : 0;
+    text-align: center;
+
+}
+
+.slider-controls .indicaters ul li {
+    display         : inline-block;
+    background-color: rgb(255, 246, 246);
+    color           : dimgrey;
+    font-weight     : bold;
+    border-radius   : 4px;
+    margin          : 0 2px;
+    cursor          : pointer;
+    line-height     : 28px;
+    height          : 28px;
+    width           : 28px;
+
+}
+
+.slider-controls .indicaters ul li.active {
+    background-color : cadetblue;
+    color: #fff;
+}
